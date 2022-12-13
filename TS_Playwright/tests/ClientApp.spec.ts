@@ -4,7 +4,7 @@ test.describe('CLIENT APP', () => {
     
 
 
-test.only('Client App Login', async ({ page }) => {
+test('Client App Login', async ({ page }) => {
     
 const userEmail=page.locator('#userEmail');
 const userPassword= page.locator('#userPassword');
