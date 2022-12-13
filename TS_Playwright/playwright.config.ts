@@ -45,10 +45,20 @@ const config: PlaywrightTestConfig = {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name : 'chrome',
       use: {
-        ...devices['Desktop Chrome'],
-      },
+
+        browserName : 'chromium',
+        headless : false,
+        screenshot : 'on',
+        video: 'retain-on-failure',
+        ignoreHTTPSErrors:true,
+        permissions:['geolocation'],
+        
+        trace : 'on',//off,on
+       // ...devices['']
+     //   viewport : {width:720,height:720}
+         }
     },
 
     // {
@@ -95,7 +105,7 @@ const config: PlaywrightTestConfig = {
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
+   outputDir: 'test-results/',
 
   /* Run your local dev server before starting the tests */
   // webServer: {
