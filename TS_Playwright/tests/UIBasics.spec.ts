@@ -41,7 +41,7 @@ console.log(allTitles);
 
 });
 
-test.skip(' UIcontrols', async ({ page }) => {
+test(' UIcontrols', async ({ page }) => {
     
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
 const radioBtn= page.locator('.radiotextsty');//2
