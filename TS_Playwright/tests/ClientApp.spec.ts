@@ -89,7 +89,7 @@ break;
     }
 
 }
-const orderIdDetails=await page.locator(".col-text").textContent()as string;
+const orderIdDetails=<string>await page.locator(".col-text").textContent();
 expect(orderIdDetails.includes(orderIdDetails)).toBeTruthy();
 //Argument of type 'string | null' is not assignable to parameter of type 'string'.
 //Type 'null' is not assignable to type 'string' to solve this problem we can use '!' (orderDetails! )or end of the line write as string
