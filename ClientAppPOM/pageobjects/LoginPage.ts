@@ -1,14 +1,34 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export class LoginPage{
-    signInbutton: any;
+
+    signInbutton: Locator;
+    email: Locator;
+    password:Locator;
+    page:Page;
 
 
     constructor(page: Page){
+        this.page=page;//
+        this.email=page.locator("#userEmail");
+        this.password=page.locator("#userPassword");
+        this.signInbutton=page.locator("[value='Login']");
 
-        const email=page.locator("#userEmail");
 
     }
 
+async goTo(){
+
+    await this.page.goto("https://rahulshettyacademy.com/client/");
+
+}
+
+async validLogin(userName:string, password:string){
+
+    await this.email.type(userName);
+    await this.password.fill(password);
+    await this.signInbutton.click();
+    await this.page.waitForLoadState('networkidle');
+}
  
 }
