@@ -62,7 +62,7 @@ for (let i = 0; i < count; i++) {
 
 })
 
-test.only('child window', async ({ browser }) => {
+test('child window', async ({ browser }) => {
     //child window handel
     const context= await browser.newContext();
     const page=await context.newPage(); 
