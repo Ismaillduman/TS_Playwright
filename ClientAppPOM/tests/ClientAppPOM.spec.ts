@@ -11,7 +11,8 @@ test('client app pom', async ({ page }) => {
     
 const pomManage= new PomManage(page);
 
-const cartPage=pomManage.getCartPage();
+
+
 const placeOrderPage=pomManage.getPlaceOrderPage();
 
 //login
@@ -24,5 +25,10 @@ await page.pause();
 const dashboardPage=pomManage.getDashBoardPage();
 await dashboardPage.addProduct("iphone 13 pro");
 await dashboardPage.naviToCart();
+
+//cart page
+const cartPage=pomManage.getCartPage();
+await cartPage.verifyProduct("iphone 13 pro");
+await cartPage.checkOut();
 
 })
