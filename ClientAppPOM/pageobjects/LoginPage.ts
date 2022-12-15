@@ -2,8 +2,7 @@ import { Locator, Page } from "@playwright/test";
 
 export class LoginPage{
     
-    readonly userName='busrayusuf@gmail.com';
-    readonly userpassword='HKNclb8318.';
+   
     signInbutton: Locator;
     email: Locator;
     password:Locator;
