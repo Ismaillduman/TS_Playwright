@@ -52,7 +52,7 @@ await orderHistoryPage.writeOrderId();
 
 }
 
-customtest.only("@web client  pom custom data ", async ({ page,username ,password,productName}) => {
+customtest("@web client  pom custom data ", async ({ page,username ,password,productName}) => {
     //to make unique name use the productName otherwiese failure will occur
 const pomManage= new PomManage(page);
 
