@@ -1,7 +1,9 @@
 import { Locator, Page } from "@playwright/test";
 
 export class LoginPage{
-
+    
+    readonly userName='busrayusuf@gmail.com';
+    readonly userpassword='HKNclb8318.';
     signInbutton: Locator;
     email: Locator;
     password:Locator;
@@ -23,10 +25,10 @@ async goTo(){
 
 }
 
-async validLogin(userName:string, password:string){
+async validLogin(userName:string, userpassword:string){
 
     await this.email.type(userName);
-    await this.password.fill(password);
+    await this.password.fill(userpassword);
     await this.signInbutton.click();
     await this.page.waitForLoadState('networkidle');
 }

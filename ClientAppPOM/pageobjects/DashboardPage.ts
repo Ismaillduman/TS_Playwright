@@ -5,7 +5,7 @@ export class DashboardPage {
   productText: Locator;
   addCart: string;
   cart: Locator;
-  orders: Locator;
+ 
 
   constructor(page: Page) {
     // i can write here public page:Page
@@ -14,7 +14,7 @@ export class DashboardPage {
     this.productText = page.locator("div .card-body b");
     this.addCart = ".w-10";
     this.cart = page.locator("[routerlink='/dashboard/cart']");
-    this.orders = page.locator("[routerlink='/dashboard/myorders']");
+   
   }
 
   async addProduct(productName) {

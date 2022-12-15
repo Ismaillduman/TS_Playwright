@@ -1,7 +1,7 @@
 import { expect, Locator, Page } from "@playwright/test";
 
 export class CartPage{
-    
+
     checkout:Locator;
     page:Page;
     table:Locator;
