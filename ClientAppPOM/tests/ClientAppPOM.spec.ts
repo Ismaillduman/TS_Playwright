@@ -13,14 +13,14 @@ const pomManage= new PomManage(page);
 
 
 
-const placeOrderPage=pomManage.getPlaceOrderPage();
+
 
 //login
 const loginpage= pomManage.getLoginPage();
 await loginpage.goTo();
 await loginpage.validLogin(userName,password);
 
-await page.pause();
+
 //dashboard
 const dashboardPage=pomManage.getDashBoardPage();
 await dashboardPage.addProduct("iphone 13 pro");
@@ -30,5 +30,13 @@ await dashboardPage.naviToCart();
 const cartPage=pomManage.getCartPage();
 await cartPage.verifyProduct("iphone 13 pro");
 await cartPage.checkOut();
+
+await page.pause();
+//placeOrderPage
+const placeOrderPage=pomManage.getPlaceOrderPage();
+await placeOrderPage.userCountry("Ge","Germany");
+await placeOrderPage.verifyUserEmail(userName);
+await placeOrderPage.orderConfirmation();
+
 
 })

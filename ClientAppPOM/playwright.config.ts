@@ -5,7 +5,7 @@ import { off } from 'process';
 
 const config: PlaywrightTestConfig = {
   testDir: './tests',
-  retries: 1,
+  //retries: 1,
   workers:3,//maximum number of concurrent worker processes to use for parallelizing tests
 
   timeout: 30 * 1000,
