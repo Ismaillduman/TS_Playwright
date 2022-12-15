@@ -21,7 +21,7 @@ this.loginpage=new LoginPage(this.page);
 this.dashboardPage=new DashboardPage(this.page);
 this.cartPage=new CartPage(this.page);
 this.placeOrderPage= new PlaceOrderPage(this.page);
-
+this.orderHistoryPage=new OrdersHistoryPage(this.page);
 
 
     }
