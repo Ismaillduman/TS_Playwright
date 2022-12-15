@@ -1,7 +1,6 @@
-//The spec files are unit tests for your source files
+//The spec files are unit tests for your source files .spec
 import {test,expect} from '@playwright/test';
 import {customtest} from "../utils/testBase" ;
-//import {customTest} from  "../utils/testBase"
 import { PomManage } from '../pageobjects/PomManage';
 //firstly i have to convert my json file to string an than to ts file
 const dataset= JSON.parse(JSON.stringify(require("../utils/clientAppTestData.json")));
@@ -9,10 +8,8 @@ const dataset= JSON.parse(JSON.stringify(require("../utils/clientAppTestData.jso
 //parameterization with different test data
 for(const data of dataset){
 test(`client app pom for ${data.productName}`, async ({ page }) => {
-    //to make unique name use the productName otherwiese failure will occur
+    //to make unique test title name use the productName otherwiese failure will occur
 const pomManage= new PomManage(page);
-
-
 
 
 
@@ -49,7 +46,6 @@ const orderHistoryPage=pomManage.getOrdersHistoryPage();
 
 expect(orderId.includes(await orderHistoryPage.getOrderId())).toBeTruthy();
 await orderHistoryPage.writeOrderId();
-
 
 
 });
