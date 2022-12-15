@@ -9,7 +9,7 @@ export class LoginPage{
 
 
     constructor(page: Page){
-        this.page=page;//
+        this.page=page;// for navigate url need
         this.email=page.locator("#userEmail");
         this.password=page.locator("#userPassword");
         this.signInbutton=page.locator("[value='Login']");
