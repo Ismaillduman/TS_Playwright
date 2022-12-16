@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {"regression": "npx playwright test",
-  "webTests": "npx playwright test --grep @Web",
-  "APITests": "npx playwright test --grep @API",
-  "ChromiumNewConfig": "npx playwright test --config playwright.config.ts --project=chromium"},
+  "scripts": {
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @Web",
+    "APITests": "npx playwright test --grep @API",
+    "ChromiumNewConfig": "npx playwright test --config playwright.config.ts --project=chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.28.1",
+    "@types/node": "^18.11.15",
     "allure-playwright": "^2.0.0-beta.21"
   }
 }

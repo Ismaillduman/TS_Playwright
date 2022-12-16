@@ -17,7 +17,7 @@ export class DashboardPage {
    
   }
 
-  async addProduct(productName) {
+  async addProduct(productName: string) {
     const text = await this.productText.allTextContents();//in array list
     console.log(text);
 
