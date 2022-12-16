@@ -16,7 +16,7 @@ test.beforeAll(async () =>
 
 
 });
-test('place orders', async ({ page }) => {
+test('@Web place orders', async ({ page }) => {
 
     page.addInitScript(value=>{
 //from application local storage take the token and direct bypass and reach to page 
