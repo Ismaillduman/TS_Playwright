@@ -20,12 +20,12 @@ export class PlaceOrderPage {
     this.ordersBtn=page.locator("button[routerlink='/dashboard/myorders']");
   }
 
-  async verifyUserEmail(userName) {
+  async verifyUserEmail(userName: string | RegExp | (string | RegExp)[]) {
     await expect(this.userEmail).toHaveText(userName);
     console.log(await this.userEmail.textContent());
   }
 
-  async userCountry(countrycode, countryName) {
+  async userCountry(countrycode: string, countryName: string) {
 
     await this.selectCountry.type(countrycode, { delay: 100 });
     await this.dropDown.waitFor();
