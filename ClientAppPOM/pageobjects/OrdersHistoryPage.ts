@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import { PomManage } from "./PomManage";
+
 
 export class OrdersHistoryPage{
 orderTable:Locator;
