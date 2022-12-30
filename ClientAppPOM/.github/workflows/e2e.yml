@@ -1,4 +1,4 @@
-name: "Playwright Tests"
+name: "e2e"
 on: [push]
 jobs:
   test-e2e:
@@ -6,15 +6,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
+      - uses: actions/setup-node@v3
       - name: Install dependencies
-        run: npm@5
-      - name: Install Playwright
+        run: npm ci
+      - name: Install playwright browsers
         run: npx playwright install --with-deps
-      - name: Run your tests
-        run: npm run regression
+      - name: Run tests
+        run: npx playwright test
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v2
